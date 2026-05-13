@@ -1,0 +1,376 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Chris Kalanda — Portfolio</title>
+<meta name="description" content="Portfolio de Chris Kalanda — Développeur Full-Stack Junior Web Mobile Backend">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="Chris Kalanda — Développeur Full-Stack Junior">
+<meta property="og:description" content="Développeur Full-Stack Junior spécialisé en React, Angular, Node.js, ASP.NET et Mobile Android.">
+<meta property="og:url" content="https://chriskalanda.vercel.app">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Chris Kalanda — Développeur Full-Stack Junior">
+<meta name="twitter:description" content="Développeur Full-Stack Junior spécialisé en React, Angular, Node.js, ASP.NET et Mobile Android.">
+
+<meta name="theme-color" content="#060c18">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%2338bdf8'/><text y='.9em' font-size='70' x='50%' text-anchor='middle' font-family='sans-serif' font-weight='bold' fill='white'>CK</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Cursor glow -->
+<div class="cursor-glow" id="cursorGlow"></div>
+
+<!-- Background particles -->
+<canvas id="bgCanvas"></canvas>
+
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#">
+      <div class="brand-mark">CK</div>
+      <span>Chris<span class="brand-last">Kalanda</span></span>
+    </a>
+    <nav class="menu" id="menu">
+      <a href="#about" data-i18n="menu_about">À propos</a>
+      <a href="#skills" data-i18n="menu_skills">Compétences</a>
+      <a href="#projects" data-i18n="menu_projects">Projets</a>
+      <a href="#contact" class="nav-cta" data-i18n="menu_contact">Contact</a>
+      <button id="langToggle" class="lang-btn" type="button" aria-label="Switch language">EN</button>
+    </nav>
+    <button class="burger" id="burger" aria-label="Menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+    <div class="hero-left">
+      <div class="hero-badge reveal" data-i18n="hero_kicker">Développeur Full-Stack Junior</div>
+      <h1 class="hero-title reveal" data-delay="100" data-i18n-html="hero_title">
+        Je construis des apps <em>web</em>, <em>mobile</em> & <em>backend</em>
+      </h1>
+      <p class="hero-pitch reveal" data-delay="200" data-i18n="hero_pitch">
+        Développeur Full-Stack Junior capable de concevoir des applications complètes :
+        Frontend moderne, APIs backend et bases de données.
+      </p>
+      <div class="hero-stack reveal" data-delay="250">
+        <span>React</span><span>Angular</span><span>Node</span><span>ASP.NET</span><span>Laravel</span><span>MongoDB</span>
+      </div>
+      <div class="hero-cta reveal" data-delay="300">
+        <a class="btn primary" href="#projects" data-i18n="cta_projects">Voir mes projets</a>
+        <a class="btn ghost" href="#contact" data-i18n="cta_contact">Me contacter</a>
+        <a class="btn icon-btn" href="assets/Chris_Kalanda_CV.pdf" download title="Télécharger CV">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+          CV
+        </a>
+      </div>
+    </div>
+    <div class="hero-right reveal" data-delay="150">
+      <div class="hero-card">
+        <div class="card-header">
+          <div class="avatar-ring">
+            <div class="avatar-inner">CK</div>
+          </div>
+          <div class="card-title">
+            <h2>Chris Kalanda</h2>
+            <p data-i18n="card_description">Développeur Full-Stack Junior — Web · Mobile · Backend</p>
+          </div>
+        </div>
+        <ul class="card-list">
+          <li><span class="dot-green"></span><span data-i18n="card_skill1">Applications full-stack</span></li>
+          <li><span class="dot-blue"></span><span data-i18n="card_skill2">APIs REST</span></li>
+          <li><span class="dot-purple"></span><span data-i18n="card_skill3">Mobile Android</span></li>
+        </ul>
+        <div class="tags">
+          <span>React</span><span>Angular</span><span>TypeScript</span><span>ASP.NET</span>
+          <span>Node</span><span>Laravel</span><span>MongoDB</span><span>Firebase</span>
+          <span>Git</span><span>Docker</span>
+        </div>
+        <div class="status-bar">
+          <span class="status-dot"></span>
+          <span data-i18n="status_open">Disponible pour opportunités</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">
+    <div class="scroll-line"></div>
+  </div>
+</section>
+
+
+<!-- ABOUT -->
+<section id="about" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-num">01</span>
+      <h2 data-i18n="about_title">À propos</h2>
+      <p class="section-sub" data-i18n="about_description">Qui je suis et ce que j'apporte à une équipe.</p>
+    </div>
+    <div class="about-grid">
+      <div class="about-text reveal" data-delay="100">
+        <p data-i18n-html="about_p2">
+          Je suis <strong>Chris Kalanda</strong>, développeur <strong>Full-Stack Junior</strong> passionné par la construction
+          d'applications complètes et bien architecturées. Mes projets m'ont permis de maîtriser la chaîne entière du développement :
+          une API REST pour un parc d'attractions, une app Android de surveillance écologique, une plateforme e-commerce Vue.js,
+          et une application de gestion de tâches full-stack React/FastAPI.
+        </p>
+        <p data-i18n-html="about_p3">
+          Ce qui me définit, c'est une approche <strong>analytique et méthodique</strong>. Je ne me contente pas de faire
+          fonctionner quelque chose — je cherche à comprendre <em>pourquoi</em> ça fonctionne, à anticiper les cas limites,
+          et à écrire un code que d'autres développeurs pourront maintenir facilement. Face à un bug complexe, je suis dans mon élément.
+        </p>
+        <p data-i18n-html="about_p4">
+          Je recherche une première opportunité professionnelle en tant que <strong>développeur junior</strong> pour contribuer
+          à des projets concrets, collaborer avec une équipe expérimentée, et accélérer ma progression. Je suis disponible
+          rapidement et prêt à m'investir pleinement.
+        </p>
+      </div>
+      <div class="about-strengths reveal" data-delay="200">
+        <h3 data-i18n="about_callout_title">Ce que j'apporte</h3>
+        <ul class="strengths-list">
+          <li data-i18n-html="about_li1"><strong>Analytique avant tout</strong> : je modélise le problème avant d'écrire la moindre ligne.</li>
+          <li data-i18n-html="about_li2"><strong>Débogueur acharné</strong> : bugs complexes, stack traces, logs — je traque jusqu'à la cause racine.</li>
+          <li data-i18n-html="about_li3"><strong>Autonome & resourceful</strong> : documentation, forums, expérimentation — je trouve des solutions.</li>
+          <li data-i18n-html="about_li4"><strong>Stack complète</strong> : React, Angular, Node, ASP.NET, Laravel, Android — du frontend à la DB.</li>
+          <li data-i18n-html="about_li5"><strong>En veille constante</strong> : je teste de nouveaux outils dès qu'ils émergent.</li>
+          <li data-i18n-html="about_li6"><strong>Communicant technique</strong> : j'explique des choix d'architecture clairement et simplement.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="about-stats reveal" data-delay="300">
+      <div class="stat-item">
+        <span class="stat-num">6</span>
+        <span class="stat-label" data-i18n="stat_projects">Projets livrés</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">10+</span>
+        <span class="stat-label" data-i18n="stat_tech">Technologies</span>
+      </div>
+      <div class="stat-item">
+        <span class="stat-num">FR · EN</span>
+        <span class="stat-label" data-i18n="stat_langs">Langues</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SKILLS -->
+<section id="skills" class="section dark-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-num">02</span>
+      <h2 data-i18n="skills_title">Compétences</h2>
+    </div>
+    <div class="skills-grid">
+
+      <div class="skill-panel reveal" data-delay="0">
+        <div class="skill-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+        </div>
+        <h3 data-i18n="skills_languages">Langages</h3>
+        <ul>
+          <li>JavaScript</li><li>TypeScript</li><li>C#</li>
+          <li>Java / Kotlin</li><li>SQL</li><li>PHP</li><li>Python</li><li>Flutter</li>
+        </ul>
+      </div>
+
+      <div class="skill-panel reveal" data-delay="100">
+        <div class="skill-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>
+        </div>
+        <h3>Frameworks & Frontend</h3>
+        <ul>
+          <li>React.js</li><li>Vue.js</li><li>Angular</li><li>Bootstrap</li>
+          <li>jQuery</li><li>ASP.NET</li><li>Node.js / Express</li><li>Laravel</li>
+        </ul>
+      </div>
+
+      <div class="skill-panel reveal" data-delay="200">
+        <div class="skill-icon">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+        </div>
+        <h3 data-i18n="skills_databases">Base de données & Outils</h3>
+        <ul>
+          <li>MongoDB</li><li>MySQL</li><li>SQL Server</li>
+          <li>PostgreSQL</li><li>Firebase</li><li>Git</li><li>Postman</li><li>Docker</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects" class="section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-num">03</span>
+      <h2>Projets</h2>
+    </div>
+    <div class="projects-grid">
+
+      <article class="project-card reveal" data-delay="0">
+        <div class="project-top">
+          <div class="project-icon" style="background: linear-gradient(135deg, #38bdf8 0%, #a78bfa 100%)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/></svg>
+          </div>
+          <div class="project-links">
+            <a href="https://minireseau.ct.ws/mini-reseau-social/public/index.php?page=login" class="proj-link" title="Live Demo" target="_blank" rel="noopener noreferrer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3>Mini-Reseau-Social</h3>
+        <p data-i18n="project_minireseausocial">Mini réseau social développé en PHP avec CSS.</p>
+        <div class="project-stack">
+          <span>PHP</span><span>CSS</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-delay="100">
+        <div class="project-top">
+          <div class="project-icon" style="background: linear-gradient(135deg, #f59e0b 0%, #ef4444 100%)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><circle cx="12" cy="12" r="10"/><path d="M12 8v4l3 3"/></svg>
+          </div>
+          <div class="project-links">
+            <a href="https://thrillworldapi-3.onrender.com/login.html" class="proj-link" title="Live Demo" target="_blank" rel="noopener noreferrer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3>ThrillWorld API</h3>
+        <p data-i18n="project_thrillworld">API REST pour la gestion d'un parc d'attractions.</p>
+        <div class="project-stack">
+          <span>Node.js</span><span>Express</span><span>SQLite</span><span>Postman</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-delay="200">
+        <div class="project-top">
+          <div class="project-icon" style="background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+          </div>
+          <div class="project-links">
+            <a href="http://friendbook-clone.somee.com/" class="proj-link" title="Live Demo" target="_blank" rel="noopener noreferrer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3>Lavalife-Web-App</h3>
+        <p data-i18n="project_lavalife">Site web avec profils utilisateurs et messagerie.</p>
+        <div class="project-stack">
+          <span>ASP.NET</span><span>C#</span><span>SQL Server</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-delay="300">
+        <div class="project-top">
+          <div class="project-icon" style="background: linear-gradient(135deg, #4ade80 0%, #059669 100%)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg>
+          </div>
+          <div class="project-links">
+            <a href="https://github.com/ChrisKalanda/EcoParcApp/releases/tag/v1.0.1" class="proj-link" title="GitHub" target="_blank" rel="noopener noreferrer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3>EcoParcApp</h3>
+        <p data-i18n="project_ecoparc">Application Android de surveillance écologique des espèces en danger dans les parcs naturels.</p>
+        <div class="project-stack">
+          <span>Kotlin</span><span>Room</span><span>Firebase</span><span>MVVM</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-delay="400">
+        <div class="project-top">
+          <div class="project-icon" style="background: linear-gradient(135deg, #3b82f6 0%, #06b6d4 100%)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/><path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"/></svg>
+          </div>
+          <div class="project-links">
+            <a href="https://shop-vue-opal.vercel.app" class="proj-link" title="Site en ligne" target="_blank" rel="noopener noreferrer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3>ShopVue</h3>
+        <p data-i18n="project_shopvue">Plateforme de e-commerce moderne avec gestion de catalogue et panier.</p>
+        <div class="project-stack">
+          <span>Vue.js</span><span>Tailwind CSS</span>
+        </div>
+      </article>
+
+      <article class="project-card reveal" data-delay="500">
+        <div class="project-top">
+          <div class="project-icon" style="background: linear-gradient(135deg, #8b5cf6 0%, #6366f1 100%)">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8"><rect x="3" y="3" width="7" height="9" rx="1"/><rect x="14" y="3" width="7" height="5" rx="1"/><rect x="14" y="12" width="7" height="9" rx="1"/><rect x="3" y="16" width="7" height="5" rx="1"/></svg>
+          </div>
+          <div class="project-links">
+            <a href="https://task-flow-pink-xi.vercel.app/" class="proj-link" title="Live Demo" target="_blank" rel="noopener noreferrer">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+        <h3>TaskFlow</h3>
+        <p data-i18n="project_taskflow">Application web full-stack de gestion de tâches avec tableau Kanban et authentification JWT.</p>
+        <div class="project-stack">
+          <span>React</span><span>FastAPI</span><span>PostgreSQL</span><span>JWT</span>
+        </div>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+<section id="contact" class="section dark-section">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-num">04</span>
+      <h2>Contact</h2>
+    </div>
+    <div class="contact-inner reveal" data-delay="100">
+      <div class="contact-left">
+        <p class="contact-tagline" data-i18n="contact_tagline">Envie de collaborer ou une question ?</p>
+        <a href="mailto:chris_kalanda@hotmail.com" class="contact-email">chris_kalanda@hotmail.com</a>
+      </div>
+      <div class="contact-links">
+        <a href="https://www.linkedin.com/in/chris-kalanda-tshibasu-4052973b3" class="social-link" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/ChrisKalanda" class="social-link" target="_blank" rel="noopener noreferrer">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container foot">
+    <span>© 2026 Chris Kalanda</span>
+    <span class="foot-sub">Développeur Full-Stack Junior</span>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
